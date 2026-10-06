@@ -257,6 +257,13 @@
     .hero .actions{justify-content:center;margin-top:24px}
     .hero .actions .btn{min-width:240px}
     .hero-scroll-cue{display:none}
+    @media(min-width:761px){
+      .hero{min-height:560px;height:calc(100vh - 68px);max-height:780px;place-items:end center}
+      .hero-content{padding:0 0 clamp(44px,6vh,68px)}
+      .hero h1{font-size:clamp(38px,4.3vw,58px)}
+      .hero-subtitle{margin-top:15px}
+      .hero .actions{margin-top:20px}
+    }
     @keyframes heroCueBounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
 
     @media(max-width:980px){.nav{gap:16px}.header-cta{display:none}.header-inner{grid-template-columns:1fr auto}.nav{justify-self:end}.service-grid{grid-auto-rows:210px}.story-grid,.video-layout,.team-layout,.faq-layout{gap:50px}.portfolio-grid{grid-template-rows:210px 250px}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
