@@ -300,6 +300,39 @@
       .mobile-book .btn{padding-inline:15px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.motion .reveal:not(.visible){opacity:1;transform:none}}
+
+    /* v022 — Header fixo + glassmorphism leve (desktop e mobile) */
+    body{padding-top:68px}
+    .site-header{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      width:100%;
+      z-index:120;
+      background:rgba(246,241,234,.78);
+      border-bottom:1px solid rgba(122,91,69,.16);
+      box-shadow:0 8px 26px rgba(42,25,20,.055);
+      -webkit-backdrop-filter:blur(14px) saturate(118%);
+      backdrop-filter:blur(14px) saturate(118%);
+    }
+    @supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+      .site-header{background:rgba(246,241,234,.96)}
+    }
+    @media(max-width:760px){
+      .nav{
+        background:rgba(246,241,234,.9)!important;
+        border-top:1px solid rgba(122,91,69,.12);
+        box-shadow:0 16px 34px rgba(42,25,20,.06);
+        -webkit-backdrop-filter:blur(18px) saturate(120%);
+        backdrop-filter:blur(18px) saturate(120%);
+      }
+      .menu-button{
+        background:rgba(255,255,255,.22);
+        -webkit-backdrop-filter:blur(8px);
+        backdrop-filter:blur(8px);
+      }
+    }
   </style>
 </head>
 <body>
